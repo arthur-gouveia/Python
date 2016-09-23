@@ -2,7 +2,11 @@
 """
 Created on Sun Sep 18 12:09:40 2016
 
-@author: arthu
+@author: arthur gouveia
+
+Reads a CSV file and imports it to a pandas Data Frame. Then it connects
+to a MySQL database, creates a new table and inserts the data into that
+table
 """
 
 import mysql.connector as con
