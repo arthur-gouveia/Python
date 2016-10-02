@@ -172,8 +172,8 @@ def ex6_7():
     print(result)
 
 
-if __name__ == '__main__':
-    print('========== MENU ==========\n')
+def printmenu():
+    print('{:=^28}\n'.format(' MENU '))
     menu = {1: 'Ex. 6.2: Reunir duas listas',
             2: 'Ex. 6.3: Reunir duas listas removendo duplicados',
             3: 'Ex. 6.5: Atendimento de fila no banco',
@@ -182,11 +182,16 @@ if __name__ == '__main__':
 
     for item in menu:
         print('{}. {}'.format(item, menu[item]))
+    return len(menu)
+
+
+if __name__ == '__main__':
 
     opção = 'x'
     while True:
-        opção = input('Entre uma opçao [1 a {}] ou S para sair: '.format(
-                                                                    len(menu)))
+        itens = printmenu()
+        opção = input(
+                'Entre uma opçao [1 a {}] ou S para sair: '.format(itens))
         if opção == '1':
             ex6_2()
         elif opção == '2':
